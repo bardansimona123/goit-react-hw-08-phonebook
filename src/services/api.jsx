@@ -26,7 +26,13 @@ export const loginUser = async (credentials) => {
 
 export const logoutUser = async () => {
   try {
-    await axios.post(`${API_URL}/users/logout`);
+    const token = localStorage.getItem('token'); // Obține tokenul din localStorage
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`, // Include tokenul în antet
+      },
+    };
+    await axios.post(`${API_URL}/users/logout`, {}, config); // Trimite cererea de delogare cu tokenul
     localStorage.removeItem('token');
   } catch (error) {
     console.error('Logout failed:', error.response ? error.response.data : error.message);
