@@ -16,6 +16,7 @@ const App = () => {
   return (
     <div className={styles.container}>
       <h1>Phonebook</h1>
+      <UserMenu />
       <Navigation />
       {isAuthenticated && (
         <>
@@ -32,7 +33,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/contacts" element={isAuthenticated ? <ContactList /> : <Login />} />
       </Routes>
-      <UserMenu />
+      
     </div>
   );
 };

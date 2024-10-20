@@ -9,15 +9,16 @@
 }
 
 h1 {
-  font-size: 2rem; /* Mărimea titlului */
-  text-align: left; /* Aliniere la stânga pentru titlu */
-  color: #333; /* Culoare titlu */
+  font-size: 3rem; 
+  text-align: left; 
+  color: #41c018; 
 }
 
 h2 {
-  font-size: 1.5rem; /* Mărimea subtitlului */
-  margin-top: 20px; /* Marginea de sus */
-  text-align: left; /* Aliniere la stânga pentru subtitlu */
+  font-size: 1.5rem; 
+  margin-top: 20px; 
+  text-align: left; 
+  color: #419b2c;
 }
 
 .formContainer {
@@ -33,6 +34,7 @@ label {
   display: flex; /* Asigură-te că label-urile sunt blocuri */
   flex-direction: column;
   gap: 10px;
+  color: #42b43f;
 }
 
 input {
@@ -43,13 +45,18 @@ input {
   border: 1px solid #ccc; /* Bordură câmp */
   border-radius: 4px; /* Colțuri rotunjite pentru câmp */
 }
+input:focus {
+  outline: none;
+  border: 2px solid rgb(4, 219, 4); /* Bordură albastră la focus */
+}
+
 
   
 
 button {
-  width: 44%; /* Lățimea butonului */
+  width: 41.6%; /* Lățimea butonului */
   padding: 10px; /* Padding interior pentru buton */
-  background-color: #007bff; /* Culoarea de fundal a butonului */
+  background-color: #0a6f47; /* Culoarea de fundal a butonului */
   color: white; /* Culoarea textului */
   border: none; /* Elimină bordura butonului */
   border-radius: 4px; /* Colțuri rotunjite pentru buton */
@@ -57,7 +64,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3; /* Schimbă culoarea fundalului la hover */
+  background-color: #0f4203; /* Schimbă culoarea fundalului la hover */
 }
 
 .contactItem {
@@ -75,4 +82,44 @@ button:hover {
   width: 17%;
   border: 1px solid #ccc; /* Bordură câmp */
   border-radius: 4px; /* Colțuri rotunjite pentru câmp */
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.navigation > * {
+  text-decoration: none;
+  color: #096f47;
+  font-size: 23px;
+}
+
+.logout {
+  width: 20%;
+}
+
+.user {
+  color: #41c018;
+  font-size: 20px;
+}
+
+.logout_section {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+}
+
+.list > * {
+  list-style-type: none;
+  font-size: 18px;
+  color: #209454;
+}
+
+.contactListItem {
+  list-style-type: none;
+  font-size: 18px;
+  color: #209454;
 }

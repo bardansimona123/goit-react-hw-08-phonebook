@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { logoutUser } from '../services/api'; // Importă funcția de logout din api
 import { clearUser } from '../redux/authSlice'; // Asigură-te că ai acțiunea clearUser în authSlice
 import { useDispatch } from 'react-redux';
+import styles from './App.module.css';
 
 const UserMenu = () => {
   const dispatch = useDispatch();
@@ -19,9 +20,9 @@ const UserMenu = () => {
   }
 
   return (
-    <div>
-      <p>Welcome, {user.email}</p>
-      <button onClick={handleLogout}>Logout</button>
+    <div className={styles.logout_section}>
+      <p className={styles.user}> {user.email}</p>
+      <button className={styles.logout} onClick={handleLogout}>Logout</button>
     </div>
   );
 };
